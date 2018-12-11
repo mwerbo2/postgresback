@@ -14,6 +14,8 @@ module.exports = {
   },
   //Return specific user
   findUser(req, res){
+    console.log("Params: "+ JSON.stringify(req.params));
+    console.log("Query: " + JSON.stringify(req.query));
     return User
     .findAll({
       where: {

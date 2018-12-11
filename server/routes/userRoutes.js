@@ -1,8 +1,9 @@
-
+const userController = require('../controller/user');
 
 
 module.exports = (app) => {
     
-    app.get('/user', (req, res) => res.status(201).send({ "message": "Users route"}));
+    app.get('/user/:email', userController.findUser);
 
+    app.post('/user/new', userController.create);
 }
