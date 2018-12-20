@@ -8,6 +8,18 @@ module.exports = (sequelize, DataTypes) => {
       autoIncrement: true,
     },
     name: DataTypes.STRING,
+    website: DataTypes.STRING,
+    levels: DataTypes.STRING,
+    format: DataTypes.STRING,
+    format_description: DataTypes.STRING,
+    description: DataTypes.STRING,
+    languages: DataTypes.STRING,
+    money_needed: DataTypes.BOOLEAN,
+    online_only: DataTypes.BOOLEAN,
+    street: DataTypes.STRING,
+    city: DataTypes.STRING,
+    zip: DataTypes.STRING,
+    country: DataTypes.STRING
   }, {});
   Bootcamp.associate = function(models) {
     Bootcamp.hasMany(models.comments, {
@@ -17,3 +29,4 @@ module.exports = (sequelize, DataTypes) => {
   };
   return Bootcamp;
 };
+

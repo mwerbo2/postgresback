@@ -11,6 +11,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 require('./server/routes/index')(app)
 require('./server/routes/userRoutes')(app)
+require('./server/routes/externalAPI')(app)
 
 app.listen(port, () => console.log(`Listening on ${port}`))
 
