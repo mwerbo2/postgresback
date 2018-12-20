@@ -22,10 +22,7 @@ module.exports = (sequelize, DataTypes) => {
     country: DataTypes.STRING
   }, {});
   Bootcamp.associate = function(models) {
-    Bootcamp.hasMany(models.comments, {
-      foreignKey: 'bootcamp_id',
-      as: 'bootcampReviews'
-    })
+  
   };
   return Bootcamp;
 };
