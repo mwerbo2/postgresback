@@ -1,7 +1,7 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
 
-  const Bootcamp = sequelize.define('Bootcamp', {
+  const bootcamp = sequelize.define('bootcamp', {
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
@@ -21,9 +21,9 @@ module.exports = (sequelize, DataTypes) => {
     zip: DataTypes.STRING,
     country: DataTypes.STRING
   }, {});
-  Bootcamp.associate = function(models) {
+  bootcamp.associate = function(models) {
   
   };
-  return Bootcamp;
+  return bootcamp;
 };
 
