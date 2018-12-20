@@ -1,5 +1,5 @@
 const axios = require('axios');
-const Bootcamp = require('../models').Bootcamp;
+const Bootcamp = require('../models').bootcamp;
 
 module.exports = {
 
