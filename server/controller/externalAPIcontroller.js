@@ -41,14 +41,11 @@ allBootcamps(req, res){
     axios.get('https://code.org/schools.json')
     .then(function (response) {
         var dat = response.data.schools;
-        // console.log(typeof(dat));
-        // console.log(dat[0])
+        console.log(dat[0])
     return BootcampSchool
         .bulkCreate(dat)
             .then(function(newBootcamps) {
-                res.json(newBootcamps);
-                console.log("Inserted all records");
-                res.send({'message': "all gone"})
+                res.status(200).json(newBootcamps);
             });
    
     })
