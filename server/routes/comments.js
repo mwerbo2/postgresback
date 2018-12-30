@@ -6,5 +6,5 @@ module.exports = (app) => {
     app.get('/comment/:id', bootcampController.bootcampComment);
 
     //Create a new comment for a bootcamp
-    app.post('/comment/post', bootcampController.create);
+    app.post('/comment/new', bootcampController.create);
 }
