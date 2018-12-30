@@ -21,7 +21,6 @@ module.exports = {
   },
   //Return bootcamp specific comments
   bootcampComment(req, res){
-    console.log(req.params.id);
     return Comment
     .findAll({
       where: {
@@ -30,5 +29,13 @@ module.exports = {
     })
     .then(comment => res.status(201).send(comment))
     .catch(error => res.status(400).send(error));
+  },
+  updateComment(req, res){
+    return Comment
+      .update({
+        comment: req.body.comment
+      }).where({
+        comment
+      })
   }
 };
