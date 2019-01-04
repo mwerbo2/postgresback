@@ -29,6 +29,8 @@ module.exports = {
   UpdateUser(req, res){
     return User
       .update()
+      .then()
+      .catch(error)
 
   }
 };
